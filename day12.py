@@ -1,7 +1,6 @@
 instructions = [line.strip() for line in open('day12.txt','r').readlines()]
 
-registers = {'a':0,'b':0,'c':0,'d':0}
-pc = 0
+
 
 
 # cpy x y copies x (either an integer or the value of a register) into register y.
@@ -56,8 +55,18 @@ def process_instruction(instruction):
     if opcode != 'jnz':
         pc += 1
 
-while (pc < len(instructions)):
-    process_instruction(instructions[pc])
+
 
 print 'Part I'
+registers = {'a':0,'b':0,'c':0,'d':0}
+pc = 0
+while (pc < len(instructions)):
+    process_instruction(instructions[pc])
+print registers['a']
+
+print 'Part II'
+registers = {'a':0,'b':0,'c':1,'d':0}
+pc = 0
+while (pc < len(instructions)):
+    process_instruction(instructions[pc])
 print registers['a']
