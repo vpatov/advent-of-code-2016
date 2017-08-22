@@ -16,6 +16,5 @@ def ff(n):
 
 def f(n):
 	return list(ff(n))[-1]
-
 print("Part I")
 print(f(elves))
