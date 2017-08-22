@@ -1,10 +1,6 @@
 from math import log
 elves = 3017957
-
-
 test_cases = {1:1,2:1,3:3,4:1,5:3,6:5,7:7,8:1,9:3,10:5,11:7}
-
-
 
 def ff(n):
 	up = 2
